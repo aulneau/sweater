@@ -10,7 +10,7 @@ interface ComponentProps {
 
 const SKETCH_NAME = 'Stripes';
 
-export const YourComponent: React.FC<ComponentProps> = ({ color }: ComponentProps) => {
+export const SketchComponent: React.FC<ComponentProps> = ({ color }: ComponentProps) => {
   let x = 50;
   const y = 50;
 

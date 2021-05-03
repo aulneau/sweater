@@ -1,6 +1,6 @@
 import React from 'react';
-import { YourComponent } from './sketch';
-import { SweaterTwo } from './sweater';
+import { SketchComponent } from './sketch';
+import { Sweater } from './sweater';
 import { Box, Flex } from '@stacks/ui';
 import { useControls } from 'leva';
 
@@ -22,9 +22,9 @@ export const App: React.FC = () => {
       height="100vh"
     >
       <Box zIndex={99} position="absolute">
-        <YourComponent color={color} />
+        <SketchComponent color={color} />
       </Box>
-      <SweaterTwo colors={{ leftArm, rightArm, torso }} color={color} />
+      <Sweater colors={{ leftArm, rightArm, torso }} color={color} />
     </Flex>
   );
 };

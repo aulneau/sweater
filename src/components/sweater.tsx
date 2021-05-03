@@ -1,31 +1,7 @@
 import React, { forwardRef } from 'react';
 import { Box, BoxProps } from '@stacks/ui';
 
-export const Sweater = forwardRef((props: BoxProps, ref) => {
-  return (
-    <Box as="svg" viewBox="0 0 556 272" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <path d="M325.122 0L295.732 54.9062L531.5 173.5L549.5 142L325.122 0Z" fill="currentColor" />
-      <path d="M230.249 0L259.64 54.9062L23.5 173L6 142L230.249 0Z" fill="currentColor" />
-      <Box
-        ref={ref}
-        as="path"
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M326 0H230V24L178 96L182 240H374L378 96L326 24V0Z"
-        fill="currentColor"
-      />
-      <rect x="182" y="240" width="192" height="32" fill="currentColor" />
-      <path d="M326 0H230C230 0 240 32 278 32C316 32 326 0 326 0Z" fill="currentColor" />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M230 0C230 0 231.065 3.40818 233.821 8C239.509 17.4783 252.401 32 278 32C303.598 32 316.491 17.4783 322.179 8C324.935 3.40818 326 0 326 0H230ZM243.484 8C244.15 8.86639 244.88 9.74754 245.678 10.6278C251.64 17.207 261.578 24 278 24C294.422 24 304.36 17.207 310.322 10.6278C311.12 9.74754 311.85 8.86639 312.516 8H243.484Z"
-        fill="currentColor"
-      />
-    </Box>
-  );
-});
-export const SweaterTwo = forwardRef(
+export const Sweater = forwardRef(
   (
     {
       colors = {
@@ -34,7 +10,13 @@ export const SweaterTwo = forwardRef(
         torso: 'currentColor',
       },
       ...props
-    }: BoxProps,
+    }: BoxProps & {
+      colors: {
+        leftArm: string;
+        rightArm: string;
+        torso: string;
+      };
+    },
     ref
   ) => {
     return (
